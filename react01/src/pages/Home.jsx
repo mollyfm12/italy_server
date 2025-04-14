@@ -1,6 +1,7 @@
 import './css/Home.css';
 import SlideShow from '../components/Slideshow';
 
+
 import main from '../images/home/main.png';
 import capp from '../images/home/capp.png';
 import dumoClose from '../images/home/dumo-close.png';
