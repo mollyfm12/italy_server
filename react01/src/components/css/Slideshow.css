@@ -1,0 +1,7 @@
+.slideshow img {
+    max-width: 600px;
+}
+
+.columns {
+    display: flex;
+}
