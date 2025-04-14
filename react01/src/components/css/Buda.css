@@ -1,0 +1,15 @@
+.buda {
+    background-color:cornflowerblue;
+    padding:10px;
+    border-radius: 5px;
+    max-width:30%;
+    margin:1%;
+}
+
+.buda img {
+    max-width:100%;
+}
+
+.buda .info {
+    padding:10px;
+}
