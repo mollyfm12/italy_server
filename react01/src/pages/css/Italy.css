@@ -1,0 +1,115 @@
+#italy-page {
+    margin: auto;
+    display: block;
+    width: 80%;
+    margin-top: 70px;
+    background-color: var(--content-background-color);
+    padding: 15px;
+    border-radius: 6px;
+  }
+  
+  .italy-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .italy-top {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #cities ul {
+    background-color: var(--dropdown-background-color);
+    color: var(--dropdown-color);
+    border-radius: 6px;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  #cities li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+  }
+  
+  #cities button {
+    background: transparent;
+    color: inherit;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  #cities button:hover {
+    color: var(--button-hover);
+  }
+  
+  #city-description {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  #italy-gallery {
+    margin: auto;
+    background-color: var(--italy-background-color);
+    padding: 20px;
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  #italy-gallery img {
+    width: 160px;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  #italy-map {
+    margin: 15px;
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  #italy-map iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 0;
+  }
+  
+  /* Responsive */
+  @media only screen and (max-width: 767px) {
+    .italy-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #cities ul {
+      text-align: center;
+    }
+  
+    #cities li {
+      display: block;
+    }
+  
+    #italy-map iframe {
+      width: 90%;
+      max-width: 100%;
+    }
+  
+    #italy-gallery {
+      justify-content: center;
+    }
+  }
+  
