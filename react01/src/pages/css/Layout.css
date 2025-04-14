@@ -1,0 +1,167 @@
+/* ========== Root Color Variables ========== */
+:root {
+    --main-background-color: rgba(244, 250, 220, 0.884);
+    --content-background-color: rgb(173, 202, 179);
+    --nav-li-color: rgb(248, 217, 233);
+    --nav-background-color: rgb(206, 113, 113);
+    --h1-color: black;
+    --nav-hover-color: rgb(245, 244, 245);
+    --node-background-color: rgb(149, 174, 154);
+    --history-background-color: rgb(149, 174, 154);
+    --dropdown-background-color: rgb(206, 113, 113);
+    --dropdown-color: rgb(245, 245, 245);
+    --italy-background-color: rgb(150, 150, 150);
+    --gallery-background-color: rgb(149, 174, 154);
+    --button-hover: cornflowerblue;
+  }
+  
+  @media screen and (min-width: 368) {
+    .columns {
+      display: flex;
+    }
+  }
+  
+  /* ========== Base Page Structure ========== */
+  body {
+    background-color: var(--main-background-color);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* ========== Header Styles ========== */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    flex-wrap: nowrap;
+  }
+  
+  header h1 {
+    color: var(--h1-color);
+    margin: 0;
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  header img {
+    margin: 20px;
+    width: 60px;
+    height: auto;
+  }
+  
+  /* ========== Navigation Styles ========== */
+  #header-nav {
+    width: 100%;
+    background-color: var(--nav-background-color);
+    text-align: center;
+    z-index: 10;
+  }
+  
+  #header-nav ul {
+    padding-left: 0;
+    background-color: var(--nav-background-color);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  #header-nav li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+  }
+  
+  #header-nav a,
+  a {
+    color: var(--nav-li-color);
+    text-decoration: none;
+  }
+  
+  #header-nav a:hover,
+  a:hover {
+    color: var(--nav-hover-color);
+  }
+  
+  #toggle-nav div {
+    width: 20px;
+    height: 2px;
+    background-color: var(--nav-li-color);
+    margin: 4px 20px;
+    display: block;
+  }
+  
+  #toggle-nav {
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  .hide-small {
+    display: none;
+  }
+  
+  /* ========== Shared Flex Utilities ========== */
+  @media only screen and (min-width: 768px) {
+    .columns,
+    #main-content,
+    #florence-page,
+    #italy-page,
+    #FAQ-page,
+    #main-content p {
+      display: flex;
+    }
+  
+    .one {
+      flex: 1;
+    }
+  
+    .three {
+      flex: 3;
+    }
+  
+    #main-nav li {
+      flex: 1;
+    }
+  
+    .italy-top {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .gallery {
+      flex-wrap: wrap;
+    }
+  
+    #toggle-nav {
+      display: none;
+    }
+  
+    .hide-small {
+      display: flex !important;
+    }
+  
+    #nav-items {
+      display: flex !important;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    #nav-items {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  

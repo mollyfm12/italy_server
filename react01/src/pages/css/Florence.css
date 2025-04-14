@@ -1,0 +1,114 @@
+/* === Florence Page Container === */
+#florence-page {
+  width: 80%;
+  margin: 70px auto;
+  background-color: var(--content-background-color);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* === Gallery Grid of Tiles === */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* === Individual Tile Styling === */
+.node {
+  background-color: var(--node-background-color);
+  color: var(--nav-li-color);
+  text-align: center;
+  padding: 15px;
+  border-radius: 6px;
+  flex: 1 1 calc(33% - 20px); /* 3 per row */
+  box-sizing: border-box;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.node:hover {
+  transform: scale(1.03);
+}
+
+.node img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* === Link Styling inside Tiles === */
+.node .link a {
+  color: var(--nav-li-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.node .link a:hover {
+  color: var(--nav-hover-color);
+}
+
+/* === Responsive Tweaks === */
+@media (max-width: 1024px) {
+  .node {
+    flex: 1 1 calc(45% - 20px); /* 2 per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .node {
+    flex: 1 1 100%; /* 1 per row */
+  }
+}
+
+
+
+#history-page {
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  margin-top: 70px;
+}
+
+#history-page h3 {
+  background-color: var(--history-background-color);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#paragraph-container {
+  margin-top: 20px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--history-background-color);
+}
+
+.topic-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topic-content p {
+  flex: 1;
+}
+
+.topic-image {
+  width: 200px;
+  height: auto;
+  border-radius: 3px;
+}
+#menus {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: var(--dropdown-background-color);
+  color: var(--dropdown-color);
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}

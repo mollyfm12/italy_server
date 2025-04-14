@@ -1,3 +1,20 @@
-.header {
-    color:green;
-}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    background-color: var(--main-background-color); 
+  }
+  
+  header img {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  header h1 {
+    color: var(--h1-color);
+    margin: 0;
+    text-align: left;
+    font-size: 1.8rem;
+  }

@@ -1,0 +1,62 @@
+#FAQ-page,
+#resources,
+#forms {
+  margin: auto;
+  display: block;
+  text-align: center;
+  margin-top: 80px;
+  width: 80%;
+  background-color: var(--content-background-color);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+#selected-question-paragraph {
+  text-align: left;
+  margin: 10px 30px;
+}
+
+
+#selections {
+  text-align: center;
+  width: 80%;
+  padding: 30px;
+  margin: auto;
+}
+
+input,
+textarea {
+  width: 80%;
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button[type='submit'] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+
+button[type='submit']:hover {
+  background-color: var(--button-hover);
+}
+
+.form-field {
+  text-align: left;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
