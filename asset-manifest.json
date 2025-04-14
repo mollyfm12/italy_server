@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/italy_server/static/css/main.8eeec026.css",
+    "main.js": "/italy_server/static/js/main.cd19e126.js",
+    "index.html": "/italy_server/index.html",
+    "main.8eeec026.css.map": "/italy_server/static/css/main.8eeec026.css.map",
+    "main.cd19e126.js.map": "/italy_server/static/js/main.cd19e126.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8eeec026.css",
+    "static/js/main.cd19e126.js"
+  ]
+}
