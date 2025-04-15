@@ -1,15 +1,16 @@
 import "./css/Buda.css";
 
-const Buda = (props) => {
+const Buda = (buda) => {
+    const imageSrc = `http://localhost:3002/${buda.main_image}`;
     return (
         <section className="buda columns">
             <section className="feature-image">
-                <img src={"http://localhost:3001/images/" + props.main_image} alt={props.name}/>
+                <img src={imageSrc} alt={buda.name}/>
             </section>
             <section className = "info">
-                <h3>{props.name}</h3>
-                <p>Descritpion: {props.description}</p>
-                <p>Rating: {props.rating}</p>
+                <h3>{buda.name}</h3>
+                <p>Descritpion: {buda.description}</p>
+                <p>Rating: {buda.rating}</p>
             </section>
         </section>
     );

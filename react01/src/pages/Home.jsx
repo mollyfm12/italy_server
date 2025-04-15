@@ -1,6 +1,7 @@
 import './css/Home.css';
 import SlideShow from '../components/Slideshow';
-
+import axios from '../components/axios';
+import {useEffect, useState} from "react";
 
 import main from '../images/home/main.png';
 import capp from '../images/home/capp.png';
@@ -12,6 +13,15 @@ import streetDuomo from '../images/home/street-duomo.JPG';
 import React from 'react';
 
 function Home () {
+
+    const [budas, setBudas] = useState([]);
+
+    useEffect(() => {
+        (async () => {
+            const response = await axios.get("/api/budas");
+            setBudas(response.data);
+        })();
+    }, []);
 
     return (
         <>
