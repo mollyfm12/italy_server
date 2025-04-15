@@ -1,2 +1,45 @@
-/*styles applied at index level App onward*/
+:root {
+  --main-background-color: rgba(244, 250, 220, 0.884);
+  --content-background-color: rgb(173, 202, 179);
+  --nav-li-color: rgb(248, 217, 233);
+  --nav-background-color: rgb(206, 113, 113);
+  --h1-color: black;
+  --nav-hover-color: rgb(245, 244, 245);
+  --node-background-color: rgb(149, 174, 154);
+  --history-background-color: rgb(149, 174, 154);
+  --dropdown-background-color: rgb(206, 113, 113);
+  --dropdown-color: rgb(245, 245, 245);
+  --italy-background-color: rgb(150, 150, 150);
+  --gallery-background-color: rgb(149, 174, 154);
+  --button-hover: cornflowerblue;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-background-color);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  color: var(--h1-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+  

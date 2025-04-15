@@ -1,6 +1,5 @@
-
 import React from 'react';
-import '../pages/css/Florence.css';
+import './css/Florence.css';
 import NodeTile from '../components/NodeTile';
 
 import ponte from '../images/florence/ponte.png';
@@ -12,8 +11,10 @@ import plaza from '../images/florence/plaza.png';
 
 function Florence() {
   return (
-    <main id="florence-page">
-      <section className="gallery">
+    <main className="florence-page">
+      <h1 className="section-title">Explore Florence</h1>
+
+      <section className="florence-gallery content-box">
         <NodeTile title="History" image={ponte} link="/florence-1a" />
         <NodeTile title="Culture" image={culture} />
         <NodeTile title="Food" image={food} />
@@ -26,3 +27,4 @@ function Florence() {
 }
 
 export default Florence;
+

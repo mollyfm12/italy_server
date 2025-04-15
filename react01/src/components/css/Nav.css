@@ -18,11 +18,16 @@
 #nav-items {
   display: none;
   flex-direction: column;
-  align-items: center;
-  padding-left: 0;
+  text-align: center;
+  padding: 0;
   margin: 0;
-  list-style-type: none;
+  background-color: var(--nav-background-color);
 }
+
+#nav-items.show {
+  display: flex;
+}
+
 
 #nav-items li {
   padding: 10px 15px;

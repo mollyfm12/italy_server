@@ -1,31 +1,34 @@
-/* === Florence Page Container === */
-#florence-page {
-  width: 80%;
-  margin: 70px auto;
-  background-color: var(--content-background-color);
-  padding: 20px;
-  border-radius: 6px;
+.florence-page {
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* === Gallery Grid of Tiles === */
-.gallery {
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--primary-color);
+}
+
+/* ========== Tile Grid ========== */
+.florence-gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+  gap: var(--spacing-lg);
+  justify-content: center;
 }
 
-/* === Individual Tile Styling === */
+/* ========== NodeTile Styles ========== */
 .node {
   background-color: var(--node-background-color);
-  color: var(--nav-li-color);
+  padding: var(--spacing-md);
+  margin: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   text-align: center;
-  padding: 15px;
-  border-radius: 6px;
-  flex: 1 1 calc(33% - 20px); /* 3 per row */
-  box-sizing: border-box;
-  transition: transform 0.2s ease, background-color 0.3s ease;
 }
+
 
 .node:hover {
   transform: scale(1.03);
@@ -33,24 +36,27 @@
 
 .node img {
   width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-top: 10px;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--accent-color);
 }
 
-/* === Link Styling inside Tiles === */
-.node .link a {
-  color: var(--nav-li-color);
+.link {
+  padding: var(--spacing-md);
+}
+
+.link a {
+  text-decoration: none;
+  color: var(--text-color);
   font-weight: bold;
   font-size: 1.1rem;
-  text-decoration: none;
 }
 
-.node .link a:hover {
+.link a:hover {
   color: var(--nav-hover-color);
 }
 
-/* === Responsive Tweaks === */
+/* ========== Responsive Tweaks ========== */
 @media (max-width: 1024px) {
   .node {
     flex: 1 1 calc(45% - 20px); /* 2 per row */
@@ -64,51 +70,41 @@
 }
 
 
+/* ========== Florence1a Styles ========== */
 
-#history-page {
-  width: 70%;
-  margin: auto;
-  padding: 20px;
-  margin-top: 70px;
+.florence1a-page {
+  padding: var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-#history-page h3 {
-  background-color: var(--history-background-color);
-  border-radius: 10px;
-  padding: 10px;
-}
-
-#paragraph-container {
-  margin-top: 20px;
-  font-size: 16px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  background-color: var(--history-background-color);
+.history-dropdown {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--spacing-sm);
+  margin: var(--spacing-md) 0;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .topic-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  margin-top: var(--spacing-lg);
 }
 
 .topic-content p {
-  flex: 1;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
 }
 
 .topic-image {
-  width: 200px;
-  height: auto;
-  border-radius: 3px;
-}
-#menus {
   width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  background-color: var(--dropdown-background-color);
-  color: var(--dropdown-color);
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
 }

@@ -27,26 +27,30 @@ function Florence1a() {
   };
 
   return (
-    <main id="history-page">
-      <select id="menus" value={selected} onChange={(e) => setSelected(e.target.value)}>
-        <option value="">--Select a topic--</option>
+    <main className="florence1a-page">
+      <h1 className="section-title">Historical Florence</h1>
+
+      <select
+        className="history-dropdown content-box"
+        value={selected}
+        onChange={(e) => setSelected(e.target.value)}
+      >
+        <option value="">-- Select a topic --</option>
         <option value="option1">Discovery of Florence</option>
         <option value="option2">The Medici Family</option>
         <option value="option3">World War I</option>
       </select>
 
-      <div id="paragraph-container">
-        {selected && (
-          <div className="topic-content">
-            <p>{topics[selected].text}</p>
-            <img
-              className="topic-image"
-              src={topics[selected].image}
-              alt={topics[selected].alt}
-            />
-          </div>
-        )}
-      </div>
+      {selected && (
+        <div className="topic-content">
+          <p>{topics[selected].text}</p>
+          <img
+            className="topic-image"
+            src={topics[selected].image}
+            alt={topics[selected].alt}
+          />
+        </div>
+      )}
     </main>
   );
 }

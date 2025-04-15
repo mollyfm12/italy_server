@@ -13,7 +13,7 @@ function Nav() {
   return (
     <nav id="header-nav">
       <button id="nav-toggle" onClick={toggleMenu}>☰</button>
-      <ul id="nav-items" className={menuOpen ? "show" : "hide-small"}>
+      <ul className={menuOpen ? "show" : "hide-small"} id="nav-items">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/Florence">Florence</Link></li>
         <li><Link to="/Italy">Around Italy</Link></li>
