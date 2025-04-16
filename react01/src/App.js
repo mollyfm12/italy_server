@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import Layout from "./pages/Layout";
 
 import Home from "./pages/Home";
@@ -11,7 +11,7 @@ import FAQ from "./pages/FAQ";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename="/italy_server">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -23,7 +23,7 @@ function App() {
           <Route path="faq" element={<FAQ />} />
         </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
