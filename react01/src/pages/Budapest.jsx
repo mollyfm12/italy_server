@@ -1,33 +1,48 @@
-import React, { useEffect, useState } from "react";
-import axios from "../components/axios";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import AddBuda from "../components/AddBuda";
+import Buda from "../components/Buda";
 import "./css/Budapest.css";
 
 function Budapest() {
   const [budas, setBudas] = useState([]);
+  const [showAddDialog, setShowAddDialog] = useState(false);
 
   useEffect(() => {
-    axios.get("/api/budas")
-      .then((res) => setBudas(res.data))
-      .catch((err) => console.error("Failed to fetch budas:", err));
+    (async () => {
+      const response = await axios.get("https://italy-backend.onrender.com/api/budas");
+      setBudas(response.data);
+    })();
   }, []);
 
-  return (
-    <main className="budapest-page">
-      <h1 className="section-title">Budapest Adventures</h1>
+  const openAddDialog = () => setShowAddDialog(true);
+  const closeAddDialog = () => setShowAddDialog(false);
 
-      <section className="buda-grid">
+  const updateBudas = (newBuda) => {
+    setBudas((prev) => [...prev, newBuda]);
+  };
+
+  return (
+    <>
+      <button id="add-buda" onClick={openAddDialog}>+</button>
+
+      {showAddDialog && (
+        <AddBuda closeAddDialog={closeAddDialog} updateBudas={updateBudas} />
+      )}
+
+      <div id="buda-plans" className="columns">
         {budas.map((buda) => (
-          <div className="buda-card" key={buda._id}>
-            <img src={`/${buda.main_image}`} alt={buda.name} />
-            <div className="buda-content">
-              <h2>{buda.name}</h2>
-              <p>{buda.description}</p>
-              <p className="rating">⭐ {buda.rating}/10</p>
-            </div>
-          </div>
+          <Buda
+            key={buda._id}
+            _id={buda._id}
+            name={buda.name}
+            description={buda.description}
+            rating={buda.rating}
+            main_image={buda.main_image}
+          />
         ))}
-      </section>
-    </main>
+      </div>
+    </>
   );
 }
 

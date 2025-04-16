@@ -4,7 +4,6 @@ import axios from "axios";
 import Buda from "./Buda";
 import AddHousePlan from "./AddHousePlan";
 
-//https://portiaportia.github.io/json/house-plans.json
 const Budas = () => {
     const [budas, setBudas] = useState([]);
     const [showAddDialog, setShowAddDialog] = useState(false);
