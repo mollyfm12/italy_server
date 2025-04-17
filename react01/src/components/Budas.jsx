@@ -2,7 +2,7 @@ import {useState, useEffect} from "react";
 import "./css/Budas.css";
 import axios from "axios";
 import Buda from "./Buda";
-import AddHousePlan from "./AddHousePlan";
+import AddBuda from "./AddBuda";
 
 const Budas = () => {
     const [budas, setBudas] = useState([]);
