@@ -12,7 +12,7 @@ const Budas = () => {
     useEffect(()=>{
         //automatically execute the async function
         (async () => {
-            const response = await axios.get("http://localhost:3001/api/budas");
+            const response = await axios.get("http://localhost:3002/api/budas");
             setBudas(response.data);
         })();
 
