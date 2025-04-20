@@ -6,8 +6,11 @@ const AddBuda = (props) => {
   const [prevSrc, setPrevSrc] = useState("");
 
   const uploadImage = (event) => {
-    setPrevSrc(URL.createObjectURL(event.target.files[0]));
+    if (event.target.files && event.target.files[0]) {
+      setPrevSrc(URL.createObjectURL(event.target.files[0]));
+    }
   };
+  
 
   const addToServer = async (event) => {
     event.preventDefault();
