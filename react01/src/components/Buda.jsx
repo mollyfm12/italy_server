@@ -1,3 +1,4 @@
+import React from "react";
 import "./css/Buda.css";
 
 const Buda = ({ _id, name, description, rating, main_image, onEdit, onDelete }) => {
