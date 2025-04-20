@@ -1,0 +1,32 @@
+/* Dialog.css */
+
+.w3-modal {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .w3-modal-content {
+    background-color: var(--main-background-color);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  
+  #dialog-close {
+    font-size: 1.5rem;
+    color: darkred;
+    float: right;
+    cursor: pointer;
+  }
+  

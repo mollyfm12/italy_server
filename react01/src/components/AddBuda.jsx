@@ -1,3 +1,4 @@
+import "./css/Dialog.css";
 import "./css/AddBuda.css";
 import React, { useState } from "react";
 
