@@ -11,7 +11,7 @@ import FAQ from "./pages/FAQ";
 
 function App() {
   return (
-    <BrowserRouter basename="/italy_server">
+    
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -23,7 +23,7 @@ function App() {
           <Route path="faq" element={<FAQ />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+
   );
 }
 
