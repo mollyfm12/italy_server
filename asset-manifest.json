@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/italy_server/static/css/main.fbf59811.css",
+    "main.css": "/italy_server/static/css/main.476ab93e.css",
     "main.js": "/italy_server/static/js/main.3b238475.js",
     "static/media/piazzaM.png": "/italy_server/static/media/piazzaM.e5cf3c1e09c76eb7e587.png",
     "static/media/ArnoR.JPG": "/italy_server/static/media/ArnoR.979425f70129847268b5.JPG",
@@ -24,11 +24,11 @@
     "static/media/medici.jpg": "/italy_server/static/media/medici.621478aaf04cca109440.jpg",
     "static/media/flight.JPG": "/italy_server/static/media/flight.69ef337e7a24e9d6b209.JPG",
     "index.html": "/italy_server/index.html",
-    "main.fbf59811.css.map": "/italy_server/static/css/main.fbf59811.css.map",
+    "main.476ab93e.css.map": "/italy_server/static/css/main.476ab93e.css.map",
     "main.3b238475.js.map": "/italy_server/static/js/main.3b238475.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbf59811.css",
+    "static/css/main.476ab93e.css",
     "static/js/main.3b238475.js"
   ]
 }
