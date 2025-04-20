@@ -17,9 +17,9 @@ function Euro() {
 
   return (
     <main id="places-grid">
-      <section className="grid-container">
+      <section className="grid-containter">
         {cities.map((city, index) => (
-          <section className="grid-item" key={index}>
+          <div className="grid-item" key={index}>
             {city.path ? (
               <Link to={city.path}>
                 <h3>{city.name}</h3>
@@ -27,7 +27,7 @@ function Euro() {
             ) : (
               <h3>{city.name}</h3>
             )}
-          </section>
+          </div>
         ))}
       </section>
     </main>
