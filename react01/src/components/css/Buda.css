@@ -32,3 +32,22 @@
     background-color: #b45555;
   }
   
+  #img-prev {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
+  
+  .columns {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (min-width: 768px) {
+    .columns {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+  
