@@ -7,7 +7,7 @@ const EditBuda = ({ buda, onClose, onSubmit }) => {
     name: buda.name,
     description: buda.description,
     rating: buda.rating,
-    img: null,
+    img: buda.img || null,
   });
 
   const [status, setStatus] = useState("");
@@ -73,6 +73,20 @@ const EditBuda = ({ buda, onClose, onSubmit }) => {
 
           <form id="edit-property-form" onSubmit={updateOnServer}>
             <h3>Edit Buda</h3>
+
+            {formData.img && typeof formData.img === "string" && (
+              <img 
+                src={formData.img} 
+                alt="Preview" 
+                style={{ 
+                  width: "100%", 
+                  maxHeight: "300px", 
+                  objectFit: "contain", 
+                  marginBottom: "10px",
+                  borderRadius: "8px"
+                }}
+              />
+            )}
 
             <p>
               <label htmlFor="name">Activity Name:</label>
