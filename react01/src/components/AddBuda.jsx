@@ -16,25 +16,33 @@ const AddBuda = (props) => {
   const addToServer = async (event) => {
     event.preventDefault();
     setResult("Sending...");
-
+  
     const formData = new FormData(event.target);
-
-    const response = await fetch("https://italy-backend.onrender.com/api/budas", {
-      method: "POST",
-      body: formData
-    });
-
-    if (response.status === 200) {
-      const newBuda = await response.json();
-      setResult("✅ Buda added successfully");
-      event.target.reset();
-      setPrevSrc("");
-      props.closeAddDialog();
-      props.updateBudas(newBuda);
-    } else {
-      setResult("❌ Error adding Buda");
+  
+    try {
+      const response = await fetch("https://italy-backend.onrender.com/api/budas", {
+        method: "POST",
+        body: formData,
+      });
+  
+      if (response.status === 200) {
+        const newBuda = await response.json();
+        setResult("✅ Buda added successfully");
+        event.target.reset();
+        setPrevSrc("");
+        props.closeAddDialog();
+        props.updateBudas(newBuda);
+      } else {
+        const errorText = await response.text();
+        console.error("Server error:", errorText);
+        setResult("❌ Server responded with error");
+      }
+    } catch (err) {
+      console.error("Network/Fetch error:", err);
+      setResult("❌ Network error. Please try again.");
     }
   };
+  
 
   return (
     <div id="add-dialog" className="w3-modal">
@@ -48,7 +56,7 @@ const AddBuda = (props) => {
             &times;
           </span>
 
-          <form id="add-property-form" onSubmit={addToServer}>
+          <form id="add-property-form" onSubmit={addToServer} encType="multipart/form-data">
             <h3>Create New Activity</h3>
 
             <p>
