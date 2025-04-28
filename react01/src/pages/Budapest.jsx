@@ -38,7 +38,7 @@ function Budapest() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`https://italy-backend.onrender.com/api/buda/${id}`);
+      const response = await axios.delete(`https://italy-backend.onrender.com/api/budas/${id}`);
       if (response.status === 200) {
         setBudas((prev) => prev.filter((buda) => buda._id !== id));
       }

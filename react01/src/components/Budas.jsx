@@ -1,3 +1,62 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+console.log("Component rendered");
+
+const Budas = () => {
+  const [budas, setBudas] = useState([]);
+  const [error, setError] = useState("");
+
+
+  useEffect(() => {
+    console.log("👀 useEffect running...");
+    (async () => {
+      try {
+        const response = await axios.get("https://italy-backend.onrender.com/api/budas");
+        console.log("✅ Fetched budas:", response.data);
+        setBudas(response.data);
+      } catch (err) {
+        console.error("❌ Fetch failed:", err);
+        setError("Error loading budas. See console.");
+      }
+    })();
+  }, []);
+
+  return (
+    <main style={{ padding: "2rem" }}>
+      <h2>Budapest Activities</h2>
+
+      {error && <p style={{ color: "red" }}>{error}</p>}
+
+      {budas.length === 0 ? (
+        <p>⏳ Loading or no data...</p>
+      ) : (
+        budas.map((buda) => (
+          <div key={buda._id} style={{
+            border: "1px solid #ccc",
+            padding: "1rem",
+            marginBottom: "1rem",
+            borderRadius: "8px",
+            backgroundColor: "#f7f7f7"
+          }}>
+            <h3>{buda.name}</h3>
+            <p>{buda.description}</p>
+            <p>Rating: {buda.rating}</p>
+            <img
+              src={`https://italy-backend.onrender.com/${buda.main_image}`}
+              alt={buda.name}
+              style={{ maxWidth: "300px", height: "auto" }}
+            />
+          </div>
+        ))
+      )}
+    </main>
+  );
+};
+
+export default Budas;
+
+/*
 import { useState, useEffect } from "react";
 import "./css/Budas.css";
 import axios from "axios";
@@ -12,10 +71,16 @@ const Budas = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await axios.get("https://italy-backend.onrender.com/api/budas");
-      setBudas(response.data);
+      try {
+        const response = await axios.get("https://italy-backend.onrender.com/api/budas");
+        console.log("✅ API responded:", response.data);
+        setBudas(response.data);
+      } catch (err) {
+        console.error("❌ API fetch failed:", err);
+      }
     })();
   }, []);
+  
 
   const openAddDialog = () => setShowAddDialog(true);
   const closeAddDialog = () => setShowAddDialog(false);
@@ -88,3 +153,4 @@ const Budas = () => {
 };
 
 export default Budas;
+*/
